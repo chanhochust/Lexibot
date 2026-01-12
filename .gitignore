@@ -1,3 +1,20 @@
-.env
+# Python bytecode
+**/__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
 .venv/
+
+# Environment variables
+.env
+
+# IDE settings
 .idea/
+
+# Database 
+chroma_db/
+
+# System files
+.DS_Store
+Thumbs.db
