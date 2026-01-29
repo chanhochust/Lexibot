@@ -432,7 +432,8 @@
                 });
 
                 const data = await response.json();
-                removeElement(thinkingId);
+                const thinkingEl = document.getElementById(thinkingId);
+                if (thinkingEl) thinkingEl.remove();
 
                 if (data.error) {
                     addMessage("⚠️ " + data.error, 'bot', false);
