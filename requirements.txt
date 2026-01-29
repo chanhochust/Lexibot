@@ -6,18 +6,17 @@ openai
 langchain
 langchain-community
 langchain-core
+langchain-text-splitters
 
-google-generativeai
+langchain_openai
 langchain-google-genai
 langchain-huggingface
-langchain-ollama
 sentence-transformers
 
 chromadb
 
 markdown
-unstructured
-networkx
 
 pymongo
 dnspython
+gunicorn
