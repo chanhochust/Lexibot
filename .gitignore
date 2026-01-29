@@ -12,6 +12,7 @@
 # IDE settings
 .idea/
 
+chroma_db/
 
 # System files
 .DS_Store
