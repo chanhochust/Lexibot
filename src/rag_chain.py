@@ -3,8 +3,8 @@ from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.runnables import RunnableLambda
+from src.models import get_embedding_model, get_llm 
 
-from src.models import get_embedding_model, get_llm
 
 DB_PATH = "./chroma_db"
 
@@ -12,13 +12,13 @@ DB_PATH = "./chroma_db"
 # PROMPT VIẾT LẠI CÂU HỎI
 # =========================
 contextualize_q_system_prompt = """
-Nhiệm vụ: Viết lại câu hỏi của người dùng thành một câu hoàn chỉnh, rõ nghĩa dựa trên lịch sử trò chuyện.
+Nhiệm vụ: Viết lại câu hỏi hiện tại thành một câu hỏi ĐỘC LẬP, đầy đủ nghĩa.
 
 Quy tắc:
-- Nếu câu hỏi phụ thuộc vào câu trước, hãy viết lại đầy đủ.
-- Làm rõ các thực thể bị ẩn (nó, cái đó, mức đó,...) dựa vào tin nhắn trước.
-- Nếu câu hỏi đã rõ ràng, giữ nguyên.
-- KHÔNG trả lời câu hỏi ở bước này.
+- Chỉ dựa vào lịch sử nếu câu hỏi có từ ngữ phụ thuộc ("thế còn", "mức đó", "ngành này"...).
+- Nếu câu hỏi đã rõ ràng và là CHỦ ĐỀ MỚI, giữ nguyên và KHÔNG liên hệ nội dung cũ.
+- KHÔNG trả lời câu hỏi.
+- Chỉ xuất ra MỘT câu hỏi hoàn chỉnh.
 """
 
 contextualize_q_prompt = ChatPromptTemplate.from_messages([
@@ -31,29 +31,58 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages([
 # PROMPT TRẢ LỜI (QA)
 # =========================
 qa_system_prompt = """
-Bạn là LexiBot – trợ lý ảo thông minh hỗ trợ sinh viên Đại học Bách Khoa Hà Nội (HUST).
+Bạn là LexiBot – trợ lý ảo hỗ trợ sinh viên Đại học Bách Khoa Hà Nội (HUST).
 
-Dưới đây là thông tin trích xuất từ quy định (Context):
+Bạn CHỈ được phép sử dụng thông tin trong phần Context bên dưới.
+
 --------------------------
+Context được cung cấp:
 {context}
 --------------------------
 
-NHIỆM VỤ:
-Trả lời câu hỏi của sinh viên dựa trên Context trên.
+NHIỆM VỤ CỦA BẠN TRƯỚC KHI TRẢ LỜI HÃY:
+1. Phân tích kỹ Context.
+2. Xác định các đoạn thông tin LIÊN QUAN đến câu hỏi, kể cả khi nằm rải rác ở nhiều điều khoản.
+3. Tổng hợp và diễn giải lại câu trả lời một cách chính xác, dễ hiểu cho sinh viên.
 
 QUY TẮC:
-1.  **Trả lời trực tiếp:** Nếu thấy thông tin liên quan trong Context, hãy tổng hợp và trả lời ngay. Đừng nói "Tôi không thấy" nếu sau đó bạn vẫn đưa ra được dữ liệu.
-2.  **Trích dẫn:** Nêu rõ tên văn bản hoặc Điều/Mục (Ví dụ: "Theo Điều 5 Quy chế đào tạo...").
-3.  **Trung thực:** Chỉ khi Context hoàn toàn không có thông tin liên quan, hãy nói: "Xin lỗi, hiện tại tài liệu mình có chưa đề cập đến vấn đề này."
-4.  **Trình bày:** Sử dụng Markdown (gạch đầu dòng, in đậm các ý chính).
-5.  **Giọng điệu:** Thân thiện, hỗ trợ, xưng "mình" và gọi "bạn".
+- **TRUY VẾT DẪN CHIẾU (QUAN TRỌNG):** - Nếu trong một đoạn văn bản có nhắc đến một Điều hoặc Khoản khác (Ví dụ: "theo quy định tại Điều 5", "xét cấp cho đối tượng tại Khoản 2 Điều 5"), bạn phải tìm xem nội dung của Điều/Khoản đó có nằm trong các đoạn Context khác được cung cấp không.
+   - Nếu có, hãy TRÍCH XUẤT CHI TIẾT nội dung đó để trả lời. Đừng chỉ nói "theo Điều 5", hãy nói rõ "Điều 5 quy định về [nội dung]... cụ thể là...".
+
+- **KHÔNG BỊA ĐẶT:** 
+  Chỉ được sử dụng thông tin có trong Context.  
+  Nếu KHÔNG tồn tại bất kỳ điều khoản nào liên quan đến câu hỏi, hãy trả lời:
+  "Hiện tại trong tài liệu mình được cung cấp không có thông tin chi tiết về vấn đề này. Bạn vui lòng liên hệ Phòng Đào tạo hoặc CTSV để được hỗ trợ chính xác nhất."
+
+- **ĐƯỢC PHÉP TỔNG HỢP:**  
+  Nếu thông tin liên quan nằm rải rác ở nhiều điều, mục hoặc bảng tiêu chí,
+  bạn PHẢI tổng hợp các phần đó để đưa ra câu trả lời đầy đủ.
+  Không từ chối chỉ vì không có cụm từ trùng khớp tuyệt đối với câu hỏi.
+
+- **TRẢ LỜI TRỰC TIẾP:**  
+  Với các câu hỏi dạng định nghĩa, điều kiện, liệt kê, gợi ý:
+  Trình bày thẳng vào nội dung.
+  KHÔNG mở đầu bằng: "Có", "Đúng vậy", "Vâng", "Chính xác".
+
+- **TRÍCH DẪN NGUỒN:**  
+  Cuối mỗi câu trả lời, bạn PHẢI ghi rõ nguồn theo định dạng:
+  [Nguồn: tên_file_gốc.txt]
+  Ví dụ: [Nguồn: quychedaotao_2025.txt] hoặc [Nguồn: quydinhhocphi_2024.txt]
+  Không ghi gì thêm ngoài format trên.
+
+- **ĐỊNH DẠNG & GIỌNG ĐIỆU:**  
+  - Dùng Markdown.
+  - Sử dụng gạch đầu dòng (-) hoặc đánh số (1., 2.) cho từng ý. Không viết thành một khối văn bản dài.
+  - Sử dụng các cấp độ danh sách (dùng tab hoặc dấu gạch phụ) để thể hiện quan hệ cha-con giữa các ý.
+  - In đậm các **con số**, **mốc thời gian**, **số tiền**, **điều kiện quan trọng** và **tên các học phần/ngành**.
+  - Giọng thân thiện, xưng "mình", gọi người dùng là "bạn".
+  - Diễn giải theo cách sinh viên dễ hiểu, không quá hành chính.
 
 Câu hỏi: {input}
 """
 
 qa_prompt = ChatPromptTemplate.from_messages([
     ("system", qa_system_prompt),
-    MessagesPlaceholder("chat_history"),
     ("human", "{input}")
 ])
 
@@ -71,15 +100,15 @@ def load_vector_db():
     )
 
 # =========================
-# BUILD RAG CHAIN (LCEL)
+# BUILD RAG CHAIN
 # =========================
-def build_rag_chain():
-    llm = get_llm()
+def build_rag_chain(model_provider="gemini"):
+    llm = get_llm(model_provider)
     vector_db = load_vector_db()
 
     retriever = vector_db.as_retriever(search_kwargs={"k": 5})
 
-    # --- STEP 1: Viết lại câu hỏi ---
+    # Viết lại câu hỏi
     def rewrite_question(inputs):
         history = inputs.get("chat_history", [])
 
@@ -100,7 +129,7 @@ def build_rag_chain():
             "chat_history": history
         }
 
-    # --- STEP 2: Retrieve tài liệu ---
+    # Retrieve tài liệu
     def retrieve_docs(inputs):
         question = inputs["question"]
         docs = retriever.invoke(question)
@@ -117,18 +146,16 @@ def build_rag_chain():
         return {
             "input": question,
             "context": context_text,
-            "chat_history": inputs["chat_history"],
             "source_documents": docs
         }
 
-    # --- STEP 3: Trả lời ---
+    # Trả lời
     def answer_question(inputs):
         chain = qa_prompt | llm
 
         prompt_inputs = {
             "input": inputs["input"],
-            "context": inputs["context"],
-            "chat_history": inputs["chat_history"]
+            "context": inputs["context"]
         }
 
         response = chain.invoke(prompt_inputs)
@@ -138,7 +165,7 @@ def build_rag_chain():
             "sources": inputs["source_documents"]
         }
 
-    # --- GHÉP PIPELINE ---
+    # Ghép pipeline
     rag_chain = (
         RunnableLambda(rewrite_question)
         | RunnableLambda(retrieve_docs)

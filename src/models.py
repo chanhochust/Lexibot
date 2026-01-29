@@ -2,6 +2,7 @@ import os
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 load_dotenv()
 
@@ -21,19 +22,32 @@ def get_embedding_model():
     print("Embedding model ready!")
     return _embedding_model_instance
 
-def get_llm():
-     # Dùng Groq (FREE)
-    api_key = os.getenv("GROQ_API_KEY")
-    if not api_key:
-        raise ValueError("Không tìm thấy GROQ_API_KEY!\n")
+def get_llm(model_provider: str = "gemini"):
+    # Gemini
+    if model_provider == "gemini":
+        api_key = os.getenv("GEMINI_API_KEY_2")
+        if not api_key:
+            raise ValueError("Không tìm thấy GOOGLE_API_KEY")
+
+        return ChatGoogleGenerativeAI(
+            model="gemini-2.5-flash-preview-09-2025",
+            google_api_key=api_key,
+            temperature=0.3,
+            max_output_tokens=2048,
+        )
+    # Dùng Groq 
+    elif model_provider == "groq":
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            raise ValueError("Không tìm thấy GROQ_API_KEY!\n")
     
-    model_name = "llama-3.3-70b-versatile" # Hoặc "gemma2-9b-it" "qwen-2.5-72b-versatile" "mixtral-8x7b-32768"
-        
-    return ChatOpenAI(
-        base_url="https://api.groq.com/openai/v1",
-        api_key=api_key,
-        model=model_name,
-        temperature=0.3,
-        max_tokens=2048,
-        timeout=60,  # Tăng timeout
-    )
+        return ChatOpenAI(
+            base_url="https://api.groq.com/openai/v1",
+            api_key=api_key,
+            model="llama-3.3-70b-versatile", # Hoặc "llama-3.1-8b-instant"
+            temperature=0.3,
+            max_tokens=2048,
+            timeout=60,  # Tăng timeout
+        )
+    else:
+        raise ValueError(f"Model provider không hợp lệ: {model_provider}")

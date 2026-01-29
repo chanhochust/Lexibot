@@ -215,156 +215,158 @@ Chương trình này cấp cả bằng Cử nhân và bằng Thạc sĩ cho sinh
 ## Trường Cơ khí
 
 Ngành đào tạo Kỹ thuật Cơ điện tử bao gồm các chương trình:
-*   Kỹ thuật Cơ điện tử (Chương trình chuẩn)
-*   Kỹ thuật Cơ điện tử (Chương trình tiên tiến)
-*   Cơ điện tử (Chương trình liên kết quốc tế với Đại học Công nghệ Nagaoka, Nhật Bản)
-*   Cơ điện tử (Chương trình liên kết quốc tế với Đại học Leibniz Hannover, Đức)
+*   Kỹ thuật Cơ điện tử (Chương trình chuẩn) - Mã ngành: ME1
+*   Kỹ thuật Cơ điện tử (Chương trình tiên tiến) - Mã ngành: ME-E1
+*   Cơ điện tử (Chương trình liên kết quốc tế với Đại học Công nghệ Nagaoka, Nhật Bản) - Mã ngành: ME-NUT
+*   Cơ điện tử (Chương trình liên kết quốc tế với Đại học Leibniz Hannover, Đức) - Mã ngành: ME-LUH
 *   Hệ thống Cơ điện tử thông minh và Rôbốt (Chương trình tài năng)
 
 Ngành đào tạo Kỹ thuật Cơ khí bao gồm:
-*   Kỹ thuật Cơ khí (Chương trình chuẩn)
-*   Cơ khí - Chế tạo máy (Chương trình liên kết quốc tế với Đại học Griffith, Úc)
+*   Kỹ thuật Cơ khí (Chương trình chuẩn) - Mã ngành: ME2
+*   Cơ khí - Chế tạo máy (Chương trình liên kết quốc tế với Đại học Griffith, Úc) - Mã ngành: ME-GU
 
 Ngành đào tào Kỹ thuật Ô tô bao gồm:
-*   Kỹ thuật Ô tô (Chương trình chuẩn)
-*   Kỹ thuật Ô tô (Chương trình tiên tiến)
+*   Kỹ thuật Ô tô (Chương trình chuẩn) - Mã ngành: TE1
+*   Kỹ thuật Ô tô (Chương trình tiên tiến) - Mã ngành: TE-E2
 
 Ngành đào tạo Kỹ thuật Cơ khí động lực bao gồm:
-*   Kỹ thuật Cơ khí động lực (Chương trình chuẩn)
+*   Kỹ thuật Cơ khí động lực (Chương trình chuẩn) - Mã ngành: TE2
 
 Ngành đào tạo Kỹ thuật Hàng không bao gồm:
-*   Kỹ thuật Hàng không (Chương trình chuẩn)
-*   Cơ khí Hàng không (Chương trình Việt - Pháp PFIEV)
+*   Kỹ thuật Hàng không (Chương trình chuẩn) - Mã ngành: TE3
+*   Cơ khí Hàng không (Chương trình Việt - Pháp PFIEV) - Mã ngành: TE-EP
 
 ## Trường Điện - Điện tử
 
 Ngành đào tạo Kỹ thuật điện bao gồm:
-*   Kỹ thuật Điện (Chương trình chuẩn)
-*   Hệ thống Điện và Năng lượng tái tạo (Chương trình tiên tiến)
+*   Kỹ thuật Điện (Chương trình chuẩn) - Mã ngành: EE1
+*   Hệ thống Điện và Năng lượng tái tạo (Chương trình tiên tiến) - Mã ngành: EE-E18
 
 Ngành đào tạo Kỹ thuật Điều khiển và Tự động hóa bao gồm:
-*   Kỹ thuật Điều khiển và Tự động hóa (Chương trình chuẩn)
-*   Kỹ thuật Điều khiển và Tự động hóa (Chương trình tiên tiến)
+*   Kỹ thuật Điều khiển và Tự động hóa (Chương trình chuẩn) - Mã ngành: EE2
+*   Kỹ thuật Điều khiển và Tự động hóa (Chương trình tiên tiến) - Mã ngành: EE-E8
 *   Điều khiển và Tự động hóa thông minh (Chương trình tài năng)
-*   Tin học công nghiệp và Tự động hóa (Chương trình Việt - Pháp PFIEV)
+*   Tin học công nghiệp và Tự động hóa (Chương trình Việt - Pháp PFIEV) - Mã ngành: EE-EP
 
 Ngành đào tạo Kỹ thuật Điện tử - Viễn thông bao gồm:
-*   Kỹ thuật Điện tử - Viễn thông (Chương trình chuẩn)
-*   Kỹ thuật Điện tử - Viễn thông (Chương trình tiên tiến)
-*   Hệ thống nhúng thông minh và IoT (Chương trình tiên tiến)
+*   Kỹ thuật Điện tử - Viễn thông (Chương trình chuẩn) - Mã ngành: ET1
+*   Kỹ thuật Điện tử - Viễn thông (Chương trình tiên tiến) - Mã ngành: ET-E4
+*   Hệ thống nhúng thông minh và IoT (Chương trình tiên tiến) - Mã ngành: ET-E9
 *   Hệ thống Điện tử thông minh và IoT (Chương trình tài năng)
-*   Kỹ thuật Điện tử - Viễn thông (Chương trình liên kết quốc tế với Đại học Leibniz Hannover, Đức)
+*   Kỹ thuật Điện tử - Viễn thông (Chương trình liên kết quốc tế với Đại học Leibniz Hannover, Đức) - Mã ngành: ET-LUH
 
 Ngành Kỹ thuật y sinh:
-*   Kỹ thuật Y sinh (Chương trình tiên tiến)
+*   Kỹ thuật Y sinh (Chương trình tiên tiến) - Mã ngành: ET-E5
+*   Kỹ thuật Y sinh (Chương trình chuẩn) - Mã ngành: ET2
 
 Ngành Truyền thông số và Kỹ thuật đa phương tiện:
-*   Truyền thông số và Kỹ thuật đa phương tiện (Chương trình tiên tiến)
+*   Truyền thông số và Kỹ thuật đa phương tiện (Chương trình tiên tiến) - Mã ngành: ET-E16
 
 ## Trường Công nghệ Thông tin & Truyền thông
 
 Ngành đào tạo Khoa học máy tính bao gồm:
-*   Khoa học Máy tính (Chương trình chuẩn)
+*   Khoa học Máy tính (Chương trình chuẩn) - Mã ngành: IT1
 *   Khoa học Máy tính (Chương trình tài năng)
-*   Khoa học máy tính (Chương trình liên kết quốc tế với Đại học Troy, Hoa Kỳ)
+*   Khoa học máy tính (Chương trình liên kết quốc tế với Đại học Troy, Hoa Kỳ) - Mã ngành: TROY-IT
 
 Ngành Kỹ thuật máy tính:
-*   Kỹ thuật Máy tính (Chương trình chuẩn)
+*   Kỹ thuật Máy tính (Chương trình chuẩn) - Mã ngành: IT2
 
 Ngành công nghệ thông tin bao gồm:
-*   Công nghệ thông tin (Chương trình tiên tiến Việt - Pháp)
-*   Công nghệ thông tin (Chương trình tiên tiến Việt - Nhật)
-*   Công nghệ thông tin (Chương trình tiên tiến Global ICT)
+*   Công nghệ thông tin (Chương trình tiên tiến Việt - Pháp) - Mã ngành: IT-EP
+*   Công nghệ thông tin (Chương trình tiên tiến Việt - Nhật) - Mã ngành: IT-E6
+*   Công nghệ thông tin (Chương trình tiên tiến Global ICT) - Mã ngành: IT-E7
 
 Ngành Khoa học dữ liệu:
-*   Khoa học dữ liệu và Trí tuệ nhân tạo (Chương trình tiên tiến)
+*   Khoa học dữ liệu và Trí tuệ nhân tạo (Chương trình tiên tiến) - Mã ngành: IT-E10
 
 Ngành An toàn thông tin:
-*   An toàn không gian số - An ninh mạng (Chương trình tiên tiến)
+*   An toàn không gian số - Cyber Security (Chương trình tiên tiến) - Mã ngành: IT-E15
 
 ## Viện Toán ứng dụng & Tin học
 
 Ngành đào tạo Toán tin bao gồm:
-*   Toán - Tin học (Chương trình chuẩn)
+*   Toán - Tin (Chương trình chuẩn) - Mã ngành: MI1
 *   Toán - Tin học (Chương trình tài năng)
 
 Ngành Hệ thống thông tin quản lý bao gồm:
-*   Hệ thống thông tin quản lý (Chương trình chuẩn)
+*   Hệ thống thông tin quản lý (Chương trình chuẩn) - Mã ngành: MI2
 
 ## Trường Hóa & Khoa học sự sống
 
 Ngành đào tạo Kỹ thuật hóa học bao gồm:
-*   Kỹ thuật Hóa học (Chương trình chuẩn)
+*   Kỹ thuật Hóa học (Chương trình chuẩn) - Mã ngành: CH1
 *   Kỹ thuật Hóa học, chuyên ngành Lọc hóa dầu (Chương trình tài năng)
-*   Kỹ thuật Hóa dược (Chương trình tiên tiến)
+*   Kỹ thuật Hóa dược (Chương trình tiên tiến) - Mã ngành: CH-E11
 
 Ngành Hóa học:
-*   Hóa học (Chương trình chuẩn)
+*   Hóa học (Chương trình chuẩn) - Mã ngành: CH2
 
 Ngành Kỹ thuật In:
-*   Kỹ thuật In (Chương trình chuẩn)
+*   Kỹ thuật In (Chương trình chuẩn) - Mã ngành: MS5
 
 Ngành Kỹ thuật sinh học:
-*   Kỹ thuật Sinh học (Chương trình chuẩn)
+*   Kỹ thuật Sinh học (Chương trình chuẩn) - Mã ngành: BF1
+*   Kỹ thuật Sinh học (Chương trình tiên tiến) - Mã ngành: BF-E19
 
 Ngành Kỹ thuật thực phẩm bao gồm:
-*   Kỹ thuật Thực phẩm (Chương trình chuẩn)
-*   Kỹ thuật Thực phẩm (Chương trình tiên tiến)
+*   Kỹ thuật Thực phẩm (Chương trình chuẩn) - Mã ngành: BF2
+*   Kỹ thuật Thực phẩm (Chương trình tiên tiến) - Mã ngành: BF-E12
 
 Ngành Kỹ thuật môi trường:
-*   Kỹ thuật Môi trường (Chương trình chuẩn)
+*   Kỹ thuật Môi trường (Chương trình chuẩn) - Mã ngành: EV1
 
 Ngành Quản lý tài nguyên và môi trường:
-*   Quản lý Tài nguyên và Môi trường (Chương trình chuẩn)
+*   Quản lý Tài nguyên và Môi trường (Chương trình chuẩn) - Mã ngành: EV2
 
 
 ### Trường Vật liệu
 
 Ngành Kỹ thuật vật liệu bao gồm:
-*   Chương trình Kỹ thuật Vật liệu (chuẩn).
-*   Chương trình Khoa học và Kỹ thuật Vật liệu (tiên tiến).
+*   Chương trình Kỹ thuật Vật liệu (chuẩn) - Mã ngành: MS1
+*   Chương trình Khoa học và Kỹ thuật Vật liệu (tiên tiến) - Mã ngành: MS-E3
 
 Ngành Kỹ thuật nhiệt:
-*   Chương trình Kỹ thuật Nhiệt (chuẩn).
+*   Chương trình Kỹ thuật Nhiệt (chuẩn) - Mã ngành: HE1
 
 Ngành Công nghệ dệt, may và ngành Kỹ thuật dệt:
-*   Chương trình Kỹ thuật Dệt – May (chuẩn).
+*   Công nghệ Dệt - May (CT chuẩn) - Mã ngành: TX1
 
 ### Viện Vật lý Kỹ thuật
 
 Ngành Vật lý kỹ thuật bao gồm các chương trình:
-*   Vật lý Kỹ thuật (CT chuẩn).
-*   Chương trình tài năng Công nghệ Nano và Quang điện tử.
+*   Vật lý Kỹ thuật (CT chuẩn) - Mã ngành: PH1
+*   Chương trình tài năng Công nghệ Nano và Quang điện tử
 
 Ngành Kỹ thuật hạt nhân:
-*   Kỹ thuật Hạt nhân (CT chuẩn).
+*   Kỹ thuật Hạt nhân (CT chuẩn) - Mã ngành: PH2
 
 Ngành Vật lý y khoa:
-*   Vật lý Y khoa (CT chuẩn).
+*   Vật lý Y khoa (CT chuẩn) - Mã ngành: PH3
 
 ### Viện Sư phạm Kỹ thuật
 
-*   Công nghệ Giáo dục (CT chuẩn).
+*   Công nghệ Giáo dục (CT chuẩn) - Mã ngành: ED2
 
 ### Viện Kinh tế & Quản lý
 
-*   Kinh tế Công nghiệp (CT chuẩn).
-*   Quản lý Công nghiệp (CT chuẩn).
+*   Kinh tế Công nghiệp (CT chuẩn)
+*   Quản lý Công nghiệp (CT chuẩn) - Mã ngành: EM2
 
 Ngành Quản trị Kinh doanh bao gồm:
-*   Quản trị Kinh doanh (CT chuẩn).
-*   Phân tích Kinh doanh (CT tiên tiến).
-*   Chương trình Quản trị Kinh doanh quốc tế (liên kết với ĐH Troy, Hoa Kỳ).
-
-*   Kế toán (CT chuẩn).
-*   Tài chính – Ngân hàng (CT chuẩn).
-*   Logistics và Quản lý Chuỗi cung ứng (CT tiên tiến).
+*   Quản trị Kinh doanh (CT chuẩn) - Mã ngành: EM3
+*   Phân tích Kinh doanh (CT tiên tiến) - Mã ngành: EM-E13
+*   Chương trình Quản trị Kinh doanh quốc tế (liên kết với ĐH Troy, Hoa Kỳ) - Mã ngành: TROY-BA
+*   Kế toán (CT chuẩn) - Mã ngành: EM4
+*   Tài chính – Ngân hàng (CT chuẩn) - Mã ngành: EM5
+*   Logistics và Quản lý Chuỗi cung ứng (CT tiên tiến) - Mã ngành: EM-E14
 
 ### Viện Ngoại ngữ
 
 Ngành Ngôn ngữ Anh:
-*   Tiếng Anh Khoa học Kỹ thuật và Công nghệ (CT chuẩn).
-*   Chương trình Tiếng Anh Chuyên nghiệp Quốc tế (song bằng với ĐH Bách khoa Hà Nội và ĐH Plymouth Marjon, Vương quốc Anh).
+*   Tiếng Anh Khoa học Kỹ thuật và Công nghệ (CT chuẩn) - Mã ngành: FL1
+*   Chương trình Tiếng Anh Chuyên nghiệp Quốc tế (song bằng với ĐH Bách khoa Hà Nội và ĐH Plymouth Marjon, Vương quốc Anh) - Mã ngành: FL2
+*   Tiếng Trung KHKT và Công nghệ (CT chuẩn) - Mã ngành: FL3
 
 --- TRANG 13 ---
 
@@ -776,10 +778,12 @@ Sinh viên thuộc các trường hợp sau đây có thể vay vốn từ Ngân
 
 ---
 
-### HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP VÀ HỌC BỔNG TRẦN ĐẠI NGHĨA
-Chi tiết về học bổng tất cả đã có trong CHƯƠNG 1: QUY ĐỊNH VỀ HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP và CHƯƠNG 2: QUY ĐỊNH VỀ HỌC BỔNG TRẦN ĐẠI NGHĨA 
-
-### HỌC BỔNG DO DOANH NGHIỆP TÀI TRỢ
+## Có 5 loại HỌC BỔNG
+*   HỌC BỔNG KHUYẾN KHÍCH HỌC TẬP
+*   HỌC BỔNG TRẦN ĐẠI NGHĨA
+*   HỌC BỔNG TÀI TRỢ
+*   HỌC BỔNG TRAO ĐỔI NƯỚC NGOÀI
+*   HỌC BỔNG GẮN KẾT QUÊ HƯƠNG
 
 **Quy trình Đăng ký Học bổng:**
 
@@ -966,7 +970,7 @@ Mục tiêu của chúng tôi là đổi mới và nâng cao hiệu quả hoạt
 
 # HỆ THỐNG THÔNG TIN DÀNH CHO SINH VIÊN
 
-## HUST.EDU.VN: Trang web chính thức của Trường Đại học Bách khoa Hà Nội
+## HUST.EDU.VN: Trang web chính thức của Đại học Bách khoa Hà Nội
 
 Đây là trang thông tin điện tử chủ yếu của Đại học Bách khoa Hà Nội. Trang này cung cấp đầy đủ thông tin về các hoạt động của Trường, từ các chương trình đào tạo, các dự án nghiên cứu khoa học, hoạt động của sinh viên cho đến các mối quan hệ hợp tác quốc tế.
 
